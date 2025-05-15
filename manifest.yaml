@@ -1,0 +1,36 @@
+version: 0.0.1
+type: plugin
+author: chssandy
+name: convert2file
+label:
+  en_US: convert2file
+  ja_JP: convert2file
+  zh_Hans: 文件转换器
+  pt_BR: convert2file
+description:
+  en_US: Convert2File is an advanced and versatile file conversion tool designed to streamline your document management workflow. Whether you're dealing with Markdown, HTML, or other text-based formats, Convert2File makes it easy to convert these files into high-quality DOCX documents.
+  ja_JP: Convert2File is an advanced and versatile file conversion tool designed to streamline your document management workflow. Whether you're dealing with Markdown, HTML, or other text-based formats, Convert2File makes it easy to convert these files into high-quality DOCX documents.
+  zh_Hans: Convert2File is an advanced and versatile file conversion tool designed to streamline your document management workflow. Whether you're dealing with Markdown, HTML, or other text-based formats, Convert2File makes it easy to convert these files into high-quality DOCX documents.
+  pt_BR: Convert2File is an advanced and versatile file conversion tool designed to streamline your document management workflow. Whether you're dealing with Markdown, HTML, or other text-based formats, Convert2File makes it easy to convert these files into high-quality DOCX documents.
+icon: icon.svg
+resource:
+  memory: 268435456
+  permission:
+    tool:
+      enabled: true
+plugins:
+  tools:
+    - provider/convert2file.yaml
+meta:
+  version: 0.0.1
+  arch:
+    - amd64
+    - arm64
+  runner:
+    language: python
+    version: "3.12"
+    entrypoint: main
+  minimum_dify_version: null
+created_at: 2025-05-14T22:51:33.87715+08:00
+privacy: PRIVACY.md
+verified: false

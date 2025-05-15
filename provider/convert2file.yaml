@@ -1,0 +1,23 @@
+identity:
+  author: chssandy
+  name: convert2file
+  label:
+    en_US: convert2file
+    zh_Hans: 文件生成器
+    ja_JP: convert2file
+    pt_BR: convert2file
+    es_ES: convert2file
+    fr_FR: convert2file
+  description:
+    en_US: Convert2File is an advanced and versatile file conversion tool designed to streamline your document management workflow. Whether you&#39;re dealing with Markdown, HTML, or other text-based formats, Convert2File makes it easy to convert these files into high-quality DOCX documents.
+    zh_Hans: Convert2File is an advanced and versatile file conversion tool designed to streamline your document management workflow. Whether you&#39;re dealing with Markdown, HTML, or other text-based formats, Convert2File makes it easy to convert these files into high-quality DOCX documents.
+    ja_JP: Convert2File is an advanced and versatile file conversion tool designed to streamline your document management workflow. Whether you&#39;re dealing with Markdown, HTML, or other text-based formats, Convert2File makes it easy to convert these files into high-quality DOCX documents.
+    pt_BR: Convert2File is an advanced and versatile file conversion tool designed to streamline your document management workflow. Whether you&#39;re dealing with Markdown, HTML, or other text-based formats, Convert2File makes it easy to convert these files into high-quality DOCX documents.
+    es_ES: Convert2File is an advanced and versatile file conversion tool designed to streamline your document management workflow. Whether you&#39;re dealing with Markdown, HTML, or other text-based formats, Convert2File makes it easy to convert these files into high-quality DOCX documents.
+    fr_FR: Convert2File is an advanced and versatile file conversion tool designed to streamline your document management workflow. Whether you&#39;re dealing with Markdown, HTML, or other text-based formats, Convert2File makes it easy to convert these files into high-quality DOCX documents.
+  icon: icon.svg
+tools:
+  - tools/convert2file.yaml
+extra:
+  python:
+    source: provider/convert2file.py

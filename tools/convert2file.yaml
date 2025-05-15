@@ -1,0 +1,60 @@
+identity:
+  name: convert2file
+  author: chssandy
+  label:
+    en_US: input_filetype to output_filetype
+    zh_Hans: 指定文本类型 转 指定文件类型
+    pt_BR: input_filetype para output_filetype
+description:
+  human:
+    en_US: A tool for generating output_filetype file from input_filetype's text
+    zh_Hans: 一个用于将转input_filetype换为output_filetype文件的工具
+  llm: A tool for generating output_filetype file from input_filetype's text
+parameters:
+  - name: input_text
+    type: string
+    required: true
+    label:
+      en_US: input text
+      zh_Hans: 传入的文本
+    human_description:
+      en_US: input text
+      zh_Hans: 传入的文本
+    form: llm
+  - name: input_filetype
+    type: string
+    required: true
+    label:
+      en_US: Filetype of the input text(markdown, html, etc.)
+      zh_Hans: 输入文本的文件类型(markdown, html, etc.)
+    human_description:
+      en_US: Filetype of the input text(markdown, html, etc.)
+      zh_Hans: 输入文本的文件类型(markdown, html, etc.)
+    form: llm
+  - name: output_filetype
+    type: string
+    required: true
+    label:
+      en_US: Filetype of the output file(docx, pdf, etc.)
+      zh_Hans: 输出文件的文件类型(docx, pdf, etc.)
+    human_description:
+      en_US: Filetype of the output file(docx, pdf, etc.)
+      zh_Hans: 输出文件的文件类型(docx, pdf, etc.)
+    form: llm
+  - name: remove_think_prompt
+    type: string
+    enum:
+      - true
+      - false
+    required: false
+    default: true
+    label:
+      en_US: Remove think prompt
+      zh_Hans: 删除思考提示
+    human_description:
+      en_US: Remove think prompt
+      zh_Hans: 删除思考提示
+    form: llm
+extra:
+  python:
+    source: tools/convert2file.py
