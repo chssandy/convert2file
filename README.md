@@ -52,6 +52,7 @@ Convert2File 是一款功能强大的文件转换工具，专为满足现代文�
 - Mac：mactex
 - Linux：texlive
 - Window：latex
+
 **提示：请根据实际情况安装对应的latex环境，并确保latex环境正常可用。**
 ![alt text](/_assets/latex_canuse.png)
 
