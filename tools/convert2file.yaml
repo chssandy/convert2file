@@ -2,13 +2,13 @@ identity:
   name: convert2file
   author: chssandy
   label:
-    en_US: input_filetype to output_filetype
-    zh_Hans: 指定文本类型 转 指定文件类型
-    pt_BR: input_filetype para output_filetype
+    en_US: input_filetype to output_filetype supported latex
+    zh_Hans: 指定文本类型 转 指定文件类型 支持数学符号
+    pt_BR: input_filetype para output_filetype supported latex
 description:
   human:
     en_US: A tool for generating output_filetype file from input_filetype's text
-    zh_Hans: 一个用于将转input_filetype换为output_filetype文件的工具
+    zh_Hans: 一个用于将转input_filetype换为output_filetype文件的工具（支持数学符号）
   llm: A tool for generating output_filetype file from input_filetype's text
 parameters:
   - name: input_text

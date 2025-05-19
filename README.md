@@ -53,6 +53,31 @@ Convert2File 是一款功能强大的文件转换工具，专为满足现代文�
 - Linux：texlive
 - Window：latex
 
+**Tips：Please install the corresponding latex environment according to your situation and ensure that the latex environment is available.**
+
+在plugin-daemon 中执行`pdflatex`命令，查看是否可用。
+```
+apt-get update && apt-get install -y texlive-xetex fontconfig 
+
+apt-get install -y fonts-wqy-zenhei
+apt-get install -y fonts-arphic-gbsn00lp
+```
+
+验证latex引擎是否安装成；验证字体是否安装成功; 验证中文样式处理包
+```
+pdflatex -v
+
+fc-list :lang=zh
+
+# 验证中文样式处理包
+kpsewhich xeCJK.sty
+kpsewhich microtype.sty
+kpsewhich xurl.sty
+# 如果缺失包，请安装对应的包
+apt install texlive-latex-recommended texlive-latex-extra texlive-lang-chinese
+
+```
+
 **提示：请根据实际情况安装对应的latex环境，并确保latex环境正常可用。**
 ![alt text](/_assets/latex_canuse.png)
 

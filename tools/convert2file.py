@@ -4,8 +4,6 @@ import tempfile
 from typing import Generator
 from dify_plugin import Tool
 from dify_plugin.entities.tool import ToolInvokeMessage
-from docx import Document
-import pypandoc
 import uuid
 
 
@@ -17,7 +15,7 @@ from tools.utils.param_util import get_input_text, get_input_filetype, get_outpu
 from tools.text2byte.text2word import get_docx_bytes
 
 
-class Md2DocxTool(Tool):
+class Convert2FileTool(Tool):
     def _invoke(self, tool_parameters: dict) -> Generator[ToolInvokeMessage, None, None]:
         """
         invoke tools
@@ -25,7 +23,7 @@ class Md2DocxTool(Tool):
         # get parameters
         with tempfile.TemporaryDirectory() as temp_dir:
             input_text = get_input_text(tool_parameters)
-            input_text = ImageUtil.preprocess(input_text, temp_dir)
+            # input_text = ImageUtil.preprocess(input_text, temp_dir)
             output_filetype = get_output_filetype(tool_parameters)
             output_extension = f".{output_filetype}"
             output_filename = f"{str(uuid.uuid4()).upper()}{output_extension}"
@@ -35,8 +33,6 @@ class Md2DocxTool(Tool):
                     result_file_bytes = get_docx_bytes(input_text, output_filetype, output_extension)
                 elif output_filetype == filetype.FileType.PDF:
                     result_file_bytes = get_pdf_bytes(input_text, output_filetype, output_extension)
-
-
                     
             except Exception as e:
                 logging.exception("Failed to convert file")

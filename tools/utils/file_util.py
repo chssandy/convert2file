@@ -21,12 +21,12 @@ def strip_wrapper(text: str, input_type: str) -> str:
     wrapper = "```"
     # 如果文本以代码块结束符结尾，则尝试去除包裹符号
     if text.endswith(wrapper):
-        if text.startswith(wrapper):
-            # 完全匹配包裹符，直接去除前后包裹符
-            text = text[len(wrapper): -len(wrapper)]
-        elif text.startswith(f"{wrapper}{input_type}"):
+        if text.startswith(f"{wrapper}{input_type}"):
             # 带 MIME 类型的包裹符，去除前缀和后缀
             text = text[(len(f"{wrapper}{input_type}")): -len(wrapper)]
+        elif text.startswith(wrapper):
+            # 完全匹配包裹符，直接去除前后包裹符
+            text = text[len(wrapper): -len(wrapper)]
     return text
 
 
